@@ -1,0 +1,30 @@
+@use '../../base/variables' as v;
+@use '../../base/mixins' as m;
+
+.nosotros{
+  width:100%;
+  text-align: center;
+  padding-top: 5rem;
+
+  &__grid {
+    display:flex;
+    flex-direction: column;
+    @include m.tablet { 
+      @include m.grid(2, 4rem)
+    }
+  }
+
+  &__texto {
+    padding: 5rem;
+    padding-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    @include m.tablet { 
+      padding: 0;
+    }
+
+  }
+
+
+}
