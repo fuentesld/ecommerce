@@ -1,0 +1,22 @@
+@use '../../base/variables' as v;
+@use '../../base/mixins' as m;
+
+.tipografia {
+  &__contenedor {
+    display:flex;
+    align-items: center;
+  }
+
+  &__sub-contenedor {
+    border: 1px solid v.$gris;
+  }
+
+  &__etiqueta {
+    flex: 0 0 25rem;
+  }
+
+  &__heading {
+    border: solid 1px v.$gris;
+    padding: 0 1rem;
+  }
+}

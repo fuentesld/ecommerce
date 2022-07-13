@@ -1,0 +1,76 @@
+@use '../../base/variables' as v;
+@use '../../base/mixins' as m;
+
+.nuestros-productos{
+  padding-top: 5rem;
+  width:100%;
+
+  &__header{
+    text-align: center;
+  }
+
+  &__grid{
+    display:block;
+    @include m.tablet { 
+      display:grid;
+      grid-template-columns: repeat(6,1fr);
+      gap: 2rem;
+    }
+  }
+
+  &__producto {
+    background-color: v.$primario;
+    color: v.$blanco;
+    margin-bottom: 2rem;
+    @include m.tablet { 
+      &:nth-child(1){
+        grid-column-start: 1;
+        grid-column-end: 7;
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+      }
+      &:nth-child(2) {
+        grid-column-start: 1;
+        grid-column-end: 4;
+      }
+      &:nth-child(3) {
+        grid-column-start: 4;
+        grid-column-end: 7;
+      }
+      &:nth-child(4) {
+        grid-column-start: 1;
+        grid-column-end: 3;
+      }
+      &:nth-child(5) {
+        grid-column-start: 3;
+        grid-column-end: 5;
+      }
+      &:nth-child(6) {
+        grid-column-start: 5;
+        grid-column-end: 7;
+      }
+      
+    }
+
+  }
+
+  &__texto {
+    text-align: center;
+    padding: 2rem;
+
+    p {
+      margin: 0 0 0.5rem 0;
+    }
+
+    .precio{
+      font-size: 2.8rem;
+      font-weight: 900;
+    }
+
+    .btn {
+      @include m.boton(v.$terciario, v.$blanco);
+      display: inline-block;
+
+    }
+  }
+}

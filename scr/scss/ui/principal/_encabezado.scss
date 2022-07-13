@@ -1,0 +1,23 @@
+@use '../../base/variables' as v;
+@use '../../base/mixins' as m;
+
+.encabezado {
+  &__titulo {
+    margin-top: 5rem;
+    text-align: center;
+    &--activo{
+      color: v.$primario;
+    }
+  }
+
+  &__navegacion {
+    border-top: 1px solid v.$grisClaro;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    @include m.tablet { 
+      flex-direction:row;
+    }
+  }
+}
