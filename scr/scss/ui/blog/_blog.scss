@@ -1,0 +1,76 @@
+@use '../../base/variables' as v;
+@use '../../base/mixins' as m;
+
+.blogs {
+  width: 100%;
+  @include m.tablet { 
+    width: 95%;
+  }
+  &__heading {
+    text-align: center;
+  }
+
+  &__grid {
+    display: block;
+    @include m.tablet { 
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      column-gap: 4rem;
+    }
+  }
+}
+
+.blog {
+  &__grid {
+    display: block;
+  }
+
+  &__entrada {
+    margin-bottom: 2rem;
+    padding-bottom: 4rem;
+  }
+
+  &__contenido {
+    padding: 2rem;
+  }
+
+  &__metadatos {
+
+    p{
+      font-weight: bold;
+      span {
+        color:v.$primario;
+      }
+    }
+
+    @include m.tablet { 
+      display:flex;
+      justify-content: space-between;
+    }
+  }
+
+  &__boton {
+    @include m.boton(v.$terciario, v.$blanco);
+    display: block;
+    margin: 0 auto;
+  }
+
+  &__enlaces {
+    ul {
+      padding-left: 2rem;
+    }
+    li{
+      font-size: 1.4rem;
+      margin-left: 2rem;
+      list-style-type: disc;
+    }
+  }
+
+  &__contenido-entrada{
+    @include m.tablet { 
+      width: 60rem;
+      margin: 0 auto;
+    }
+    
+  }
+}
