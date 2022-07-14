@@ -1,3 +1,7 @@
-# Basic Setting y Mixins for SASS development
+# Sitio web para una tienda de muebles
+Demo para un tienda de muebles
 
-## Gulp rutine for image conversion.
+`http://yautics.dev/ecommerce`
+
+Si bajaste el código fuentes recuerda inicializar las librerias de node
+`npm init`
