@@ -376,6 +376,7 @@ p {
   font-size: 1.6rem;
 }
 
+[class$=contenedor],
 .contenedor {
   width: 95%;
   max-width: 1200px;
